@@ -24,7 +24,7 @@ pub fn compute_lcs(
     }
 
     let mut index = L[m][n] as usize; 
-    let mut lcs: Vec<char> = vec![ '\0' ; index + 1 ]; 
+    let mut lcs: Vec<char> = vec![ '\0' ; index ]; 
 
     let mut i = m ; 
     let mut j = n ; 
@@ -44,4 +44,51 @@ pub fn compute_lcs(
     }
 
     lcs.into_iter().collect()
+}
+
+
+#[cfg(test)]
+mod tests_lcs {
+    use crate::lcs::compute_lcs;
+
+    #[test]
+    fn lcs_testcase_1() {
+        let seq1 = "ABCDEF" ; 
+        let seq2 = "ABCDEF" ; 
+        let lcs = compute_lcs(seq1, seq2) ; 
+        assert_eq!( lcs , "ABCDEF" ) ; 
+    }
+
+    #[test]
+    fn lcs_testcase_2() {
+        let seq1 = "ABC" ; 
+        let seq2 = "XYZ" ; 
+        let lcs = compute_lcs(seq1, seq2) ; 
+        assert_eq!( lcs , "" ) ; 
+    }
+
+    #[test]
+    fn lcs_testcase_3() {
+        let seq1 = "AABCXY" ; 
+        let seq2 = "XYZ" ; 
+        let lcs = compute_lcs(seq1, seq2) ; 
+        assert_eq!( lcs , "XY" ) ; 
+    }
+
+    #[test]
+    fn lcs_testcase_4() {
+        let seq1 = "" ; 
+        let seq2 = "" ; 
+        let lcs = compute_lcs(seq1, seq2) ; 
+        assert_eq!( lcs , "" ) ; 
+    }
+
+    #[test]
+    fn lcs_testcase_5() {
+        let seq1 = "ABCD" ; 
+        let seq2 = "AC" ; 
+        let lcs = compute_lcs(seq1, seq2) ; 
+        assert_eq!( lcs , "AC" ) ; 
+    }
+
 }
