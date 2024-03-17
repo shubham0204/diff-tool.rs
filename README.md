@@ -2,12 +2,19 @@
 
 ## Usage
 
+```
+$> ./diff-tool-rs samples/sample_02/script1.kt samples/sample_02/script2.kt
+```
+
 ## Testing
 
-## Development Log
-
-* 13-03-2024: Added `compute_lcs` in `src/lcs.rs` and test-cases ( [Reference](https://www.programiz.com/dsa/longest-common-subsequence) )
-* 12-03-2024: Project initiated from [codingchallenges.fyi](https://codingchallenges.fyi/challenges/challenge-diff)
+```
+$> cargo test
+```
 
 ## Useful Resources
 
+* [`codingchallenges.fyi`](https://codingchallenges.fyi/challenges/challenge-diff)
+* [Programiz: Longest Common Subsequence](https://www.programiz.com/dsa/longest-common-subsequence)
+* [Wikipedia: Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence)
+* [Write your own diff for fun](https://alex.dzyoba.com/blog/writing-diff/)
