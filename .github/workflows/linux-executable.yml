@@ -4,11 +4,11 @@ on: [ 'workflow_dispatch']
 
 jobs:
   build_linux_x64:
-    name: Buils Linux x64 executable
+    name: Builds Linux x64 executable
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install x86_64 (amd64) Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: diff-x64-linux
-          path: target/x86_64-unknown-linux-gnu/diff
+          path: target/x86_64-unknown-linux-gnu/release/diff
