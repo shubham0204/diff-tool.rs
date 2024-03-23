@@ -1,0 +1,25 @@
+name: Build executables for the diff tool
+
+on: [ 'workflow_dispatch']
+
+jobs:
+  build_linux_x64:
+    name: Buils Linux x64 executable
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project source code
+        uses: actions/checkout@v2
+
+      - name: Install x86_64 (amd64) Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Build executable for x86_64 target
+        run: cargo build --target=x86_64-unknown-linux-gnu --release
+
+      - name: Upload x86_64 executable as artifact of the build
+        uses: actions/upload-artifact@v3
+        with:
+          name: diff
+          path: target/release/diff
