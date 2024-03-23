@@ -30,7 +30,7 @@ fn main() {
                 DiffType::None => " ",
             },
             match diff.diff_type {
-                DiffType::Add => diff.line.bright_yellow(),
+                DiffType::Add => diff.line.bright_green(),
                 DiffType::Del => diff.line.bright_red(),
                 DiffType::None => diff.line.bright_white(),
             }
