@@ -1,4 +1,8 @@
+
+![banner](https://github.com/shubham0204/diff-tool.rs/assets/41076823/1094d471-d233-43ce-89b4-e1636d4db554)
+
 # `diff` Tool In Rust
+
 
 ![diff_tool](https://github.com/shubham0204/diff-tool.rs/assets/41076823/d0f68749-08f6-40a9-80b8-6171a2436a68)
 
