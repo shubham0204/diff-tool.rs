@@ -37,3 +37,4 @@ $> ./diff samples/sample_02/script1.kt samples/sample_02/script2.kt
 * [Wikipedia: Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence)
 * [Write your own diff for fun](https://alex.dzyoba.com/blog/writing-diff/)
 * [Enjoy Algorithms: Longest Common Subsequence](https://www.enjoyalgorithms.com/blog/longest-common-subsequence)
+* Reddit discussions on `diff-tool.rs`: [`r/rust`](https://www.reddit.com/r/rust/comments/1bq0xa9/difftoolrs_a_simple_diff_utility_that_uses_lcs_to/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) and [`r/learnrust`](https://www.reddit.com/r/learnrust/comments/1bqcddl/difftoolrs_a_simple_diff_utility_that_uses_lcs_to/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
